@@ -4,6 +4,15 @@ Firmware for the **ESP32-2432S028** (Cheap Yellow Display): a pocket **password 
 
 Pair the board as **`Wallet Remote`**. Logins and Type shortcuts live on a FAT32 microSD card.
 
+**[Full tutorial: flash, pair, and every menu with pictures →](docs/TUTORIAL.md)**
+
+<p align="center">
+  <img src="docs/images/home.png" alt="Home menu" width="180">
+  <img src="docs/images/wallet-home.png" alt="Password Wallet" width="180">
+  <img src="docs/images/macropad.png" alt="Macro Pad" width="180">
+  <img src="docs/images/settings.png" alt="Settings" width="180">
+</p>
+
 ## Features
 
 - **Password Wallet** — add, type, copy, pin, and delete logins from the screen
@@ -22,6 +31,8 @@ Pair the board as **`Wallet Remote`**. Logins and Type shortcuts live on a FAT32
 This build uses the **ST7789** panel driver. If the image is garbled or inverted, see [Board variant](#board-variant).
 
 ## Flash
+
+See the **[tutorial](docs/TUTORIAL.md)** for pictures and a full walkthrough.
 
 One file contains bootloader, partitions, and app: **`dist/wallet-remote.bin`**. Write it at **`0x0`**.
 
@@ -104,6 +115,7 @@ src/                    firmware
 tools/                  Bluetooth clipboard helper (Windows)
 scripts/                rebuild and flash
 sd_template/            example SD files
+docs/                   tutorial and menu pictures
 dist/                   merged flash image after a build
 ```
 
