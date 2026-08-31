@@ -26,6 +26,8 @@ You only need a USB cable for this step. After flashing, you can power the board
 
 Flash **`dist/wallet-remote.bin` at address `0x0`**. Do not write the smaller `firmware.bin` at `0x0` — that leaves a black screen.
 
+The firmware is Arduino code: [`arduino/WalletRemote/WalletRemote.ino`](../arduino/WalletRemote/WalletRemote.ino). PlatformIO is the usual way to build it; Arduino IDE steps are in [`ARDUINO_IDE.md`](ARDUINO_IDE.md).
+
 If the board does not reboot, press **RST / EN**.
 
 ### One-time helper install (Windows)
@@ -146,7 +148,7 @@ From Home, tap **Settings**.
 |--------------|-------------|
 | Black screen | Flash `dist/wallet-remote.bin` at `0x0`, not `firmware.bin` |
 | Garbled colors | Toggle `TFT_INVERSION_ON` in `platformio.ini` and rebuild |
-| Touch is mirrored | Flip `TOUCH_INVERT_X`, `TOUCH_INVERT_Y`, or `TOUCH_SWAP_XY` in `src/config.h` |
+| Touch is mirrored | Flip `TOUCH_INVERT_X`, `TOUCH_INVERT_Y`, or `TOUCH_SWAP_XY` in `arduino/WalletRemote/config.h` |
 | Copy sends nothing | Pair Bluetooth, click the website field, run `tools\install-helper.ps1` once |
 | Password did not copy | Many sites block copy on hidden password fields; show the password first |
 

@@ -109,9 +109,8 @@ Copy the examples from `sd_template/` to the **root** of a FAT32 card, or let th
 ## Project layout
 
 ```
-platformio.ini          board, LVGL, TFT_eSPI, NimBLE
-include/                LVGL config + BLE keyboard header
-src/                    firmware
+arduino/WalletRemote/   Arduino sketch (WalletRemote.ino + firmware .cpp)
+platformio.ini          PlatformIO build (src_dir points at the sketch)
 tools/                  Bluetooth clipboard helper (Windows)
 scripts/                rebuild and flash
 sd_template/            example SD files
@@ -125,11 +124,14 @@ Most USB-C “7789” units work with the current `ST7789_DRIVER` flags in `plat
 
 - **Black screen** — flash `dist/wallet-remote.bin` at `0x0`, not `firmware.bin`
 - **Garbled / inverted colors** — toggle `TFT_INVERSION_ON`
-- **Touch mirrored** — flip `TOUCH_INVERT_X`, `TOUCH_INVERT_Y`, or `TOUCH_SWAP_XY` in `src/config.h`
+- **Touch mirrored** — flip `TOUCH_INVERT_X`, `TOUCH_INVERT_Y`, or `TOUCH_SWAP_XY` in `arduino/WalletRemote/config.h`
 
 ## Build from source
 
-[PlatformIO](https://platformio.org/) + Python 3:
+Arduino sketch: **[`arduino/WalletRemote/WalletRemote.ino`](arduino/WalletRemote/WalletRemote.ino)**  
+Arduino IDE steps: **[docs/ARDUINO_IDE.md](docs/ARDUINO_IDE.md)**
+
+[PlatformIO](https://platformio.org/) + Python 3 (recommended):
 
 ```powershell
 python -m platformio run -e cyd
