@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "entries": [
+    {
+      "name": "Example Site",
+      "username": "you@example.com",
+      "password": "change-me",
+      "pinned": false
+    }
+  ]
+}

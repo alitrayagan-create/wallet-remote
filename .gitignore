@@ -1,0 +1,33 @@
+# PlatformIO
+.pio/
+.vscode/.browse.c_cpp.db*
+.vscode/c_cpp_properties.json
+.vscode/launch.json
+.vscode/ipch
+
+# Build artifacts
+dist/*.bin
+*.elf
+*.map
+build_log.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Secrets — never commit a live password database
+sd_template/data.json
+!sd_template/data.example.json
+
+# Unrelated local projects that share this folder
+car-game/
+robot-car/
+health-monitor/
+voice-watch/
